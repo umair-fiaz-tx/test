@@ -31,8 +31,8 @@ test:
   database: project_test
   pool: 5
   timeout: 5000
-  username:
-  password:
+  username: postgres
+  password: noonehacks
 
 
 production:
@@ -42,5 +42,5 @@ production:
   database: project_production
   pool: 5
   timeout: 5000
-  username:
-  password:
+  username: postgres
+  password: noonehacks
