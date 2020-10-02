@@ -76,18 +76,18 @@
 <!--
 <h1 >Listing Articles</h1>
 
-<% if @search %>
-  <%= search_form_for @search  do|f| %>
+<#% if @search %>
+  <#%= search_form_for @search  do|f| %>
     <div class = "field">
-        <%= f.label :title_cont, "Title Contains" %>
-        <%= f.text_field :title_cont %>
+        <#%= f.label :title_cont, "Title Contains" %>
+        <#%= f.text_field :title_cont %>
       </div>
 
     <div class="actions">
-      <%= f.submit "Search"  %></div>
-  <% end %>
-<% end %>
-<%= link_to 'New article', new_article_path,:class => "button btn btn-primary", id: "new_link", remote: true %>
+      <#%= f.submit "Search"  %></div>
+  <#% end %>
+<#% end %>
+<#%= link_to 'New article', new_article_path,:class => "button btn btn-primary", id: "new_link", remote: true %>
 <table class="table table-bordered ,p-3 mb-2 bg-warning text-white">
   <tr >
     <th class="text-danger"><h2>ID</h2></th>
@@ -95,21 +95,21 @@
     <th class="text-danger"><h2>Text</h2></th>
     <th colspan="3"></th>
   </tr>
-  <% @articles.each.with_index(1) do |article, index| %>
-    <tr id=<%= index %>>
-      <td><%= index %></td>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article),  :class => "button btn btn-success" %></td>
-      <% if current_user%>
-      <td><%= link_to 'Edit', edit_article_path(article), :class => "button btn btn-info" %></td>
-      <td><%= link_to 'Destroy', article_path(article), :id=>index , :class => "customclass button btn btn-primary", remote: true,
+  <#% @articles.each.with_index(1) do |article, index| %>
+    <tr id=<#%= index %>>
+      <td><#%= index %></td>
+      <td><#%= article.title %></td>
+      <td><#%= article.text %></td>
+      <td><#%= link_to 'Show', article_path(article),  :class => "button btn btn-success" %></td>
+      <#% if current_user%>
+      <td><#%= link_to 'Edit', edit_article_path(article), :class => "button btn btn-info" %></td>
+      <td><#%= link_to 'Destroy', article_path(article), :id=>index , :class => "customclass button btn btn-primary", remote: true,
                       method: :delete,
                       data: { confirm: 'Are you sure?'} %>
       </td>
-        <% end %>
+        <% #end %>
     </tr>
-  <% end %>
-  <%=  paginate(@articles) %>
+  <#% end %>
+  <#%=  paginate(@articles) %>
 </table>
 -->
