@@ -1,0 +1,52 @@
+<div class="row" align="center">
+  <div class="col-md-6 mx-auto p-0">
+    <div class="card">
+      <div class="login-box">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="login-snip"> <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+            <div class="login-space">
+              <div class="login">
+                <div class="group"> <label for="user" class="label">Username</label>
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input' %> </div>
+                <div class="group"> <label for="pass" class="label">Password</label>
+                  <%= f.password_field :password, autocomplete: "off" , class: 'input'%></div>
+                <div class="group"><input id="check" type="checkbox" class="check" checked> <label for="check">
+                  <span class="icon"></span> Keep me Signed in</label> </div>
+                <div class="group"> <%= f.submit "Log in" , class:'button'%></div>
+                <div class="hr"></div>
+                <div class="foot"> <a href="#">Forgot Password?</a> </div>
+              </div>
+        <% end %>
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+
+          <div class="sign-up-form">
+              <div class="group"><label for="pass" class="label">Email Address</label>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class:'input'%></div>
+
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+
+            <div class="group"> <label for="pass" class="label">Password</label>
+              <%= f.password_field :password, autocomplete: "off", class: 'input'%>
+
+              <div class="group"> <label for="pass" class="label">Repeat Password</label>
+                <%= f.password_field :password_confirmation, autocomplete: "off",  class:'input' %>
+
+              <div class="group">
+                <%= f.submit "Sign up" , class:'button' %>
+
+              <div class="hr"></div>
+              <div class="foot"> <label for="tab-1">Already Member?</label> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+<% end %>

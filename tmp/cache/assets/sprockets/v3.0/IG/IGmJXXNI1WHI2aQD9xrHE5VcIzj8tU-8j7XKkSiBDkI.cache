@@ -1,0 +1,9 @@
+I"¯(function() {
+  $(function() {
+    return $(".customclass").on("ajax:success", function(event) {
+      return alert("The article was deleted.");
+    });
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,7 @@
+{
+  "name": "rails_project",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "^3.4.1"
+  }
+}

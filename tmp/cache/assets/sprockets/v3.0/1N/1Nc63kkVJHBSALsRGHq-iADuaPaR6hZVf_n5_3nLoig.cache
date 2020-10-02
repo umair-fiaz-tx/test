@@ -1,0 +1,10 @@
+I"á(function() {
+  $(function() {
+    return $(".customclass").on("ajax:success", function(event) {
+      $('tr#' + event.currentTarget.id).remove();
+      return alert("The article was deleted.");
+    });
+  });
+
+}).call(this);
+:ET

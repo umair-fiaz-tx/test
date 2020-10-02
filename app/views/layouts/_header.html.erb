@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+<div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://localhost:3000/articles" :class = "text-danger" ><b>DASHBOARD</b></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href=" http://localhost:3000/articles"><b>My Articles</b></a></li>
+      <li class="active"><a href="http://localhost:3000/articles/new"><b>New Article</b></a></li>
+    </ul>
+
+
+  <%= link_to 'Sign Out', destroy_user_session_path , method: :delete,:class=> "btn btn-danger right" %>
+
+</div>
+</nav>
